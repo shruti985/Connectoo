@@ -10,8 +10,8 @@ import axios from "axios";
 
 const API_ROOT =
   window.location.hostname === "localhost"
-    ? "http://localhost:5000/api"
-    : "http://localhost:5000/api";
+    ? "https://connectoo-hhu6.onrender.com/api"
+    : "https://connectoo-hhu6.onrender.com/api";
 const API_BASE = `${API_ROOT}/auth`;
 
 const Signup = () => {

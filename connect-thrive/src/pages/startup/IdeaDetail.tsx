@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 import axios from "axios";
 
-const API = "https://connecto-2.onrender.com";
+const API = "https://connectoo-hhu6.onrender.com";
 
 // ─── helpers ────────────────────────────────────────────────────────────────
 const getToken = () => localStorage.getItem("token");

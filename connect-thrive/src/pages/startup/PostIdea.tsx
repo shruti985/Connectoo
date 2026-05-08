@@ -72,7 +72,7 @@ const PostIdea = () => {
 
       // 2. Backend API Call (URL check kar lena apne hisab se)
       const response = await axios.post(
-        "https://connecto-2.onrender.com/api/startup/post-idea",
+        "https://connectoo-hhu6.onrender.com/api/startup/post-idea",
         ideaData,
         { headers: { Authorization: token } },
       );

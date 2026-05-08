@@ -86,7 +86,7 @@ const CommunitiesSection = () => {
       const token = localStorage.getItem("token");
   
       const res = await axios.get(
-        "https://connecto-2.onrender.com/api/communities/my-communities",
+        "https://connectoo-hhu6.onrender.com/api/communities/my-communities",
         {
           headers: { Authorization: token },
         }
@@ -100,7 +100,7 @@ const CommunitiesSection = () => {
       await Promise.all(
         ids.map(async (id: number) => {
           const res = await axios.get(
-            `https://connecto-2.onrender.com/api/communities/${id}/members-count`
+            `https://connectoo-hhu6.onrender.com/api/communities/${id}/members-count`
           );
   
           map[id] = res.data.membersCount;

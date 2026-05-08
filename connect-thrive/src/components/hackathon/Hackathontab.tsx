@@ -65,8 +65,8 @@ const SKILL_COLORS = [
 ];
 const skillColor = (i: number) => SKILL_COLORS[i % SKILL_COLORS.length];
 
-// const API = "https://connecto-2.onrender.com";
-const API = "https://connecto-2.onrender.com";
+// const API = "https://connectoo-hhu6.onrender.com";
+const API = "https://connectoo-hhu6.onrender.com";
 
 // ─── Slot bar component ────────────────────────────────────────────────────
 const SlotBar = ({ filled, total }: { filled: number; total: number }) => (
