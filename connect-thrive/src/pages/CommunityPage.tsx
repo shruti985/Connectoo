@@ -15,7 +15,7 @@ import HackathonTab from "../components/hackathon/Hackathontab";
 import TravelResources from "./TravelResources";
 import MentalWellnessResources from "./Mentalwellnessresources";
 import FitnessResources from "./FitnessResources";
-import CodingResources from "./Codingresources";
+import CodingResources from "./CodingResources";
 import EmojiPicker from "emoji-picker-react";
 import { Smile } from "lucide-react";
 import {
