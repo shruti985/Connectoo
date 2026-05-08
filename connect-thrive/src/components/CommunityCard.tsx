@@ -53,12 +53,7 @@ const CommunityCard = ({
             {description}
           </p>
 
-          <div className="flex items-center justify-between mt-auto pt-4 border-t border-border/50">
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <Users className="w-4 h-4" />
-              <span>{members}</span>
-            </div>
-          </div>
+        
         </div>
       </div>
     </motion.div>
