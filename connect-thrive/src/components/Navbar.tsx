@@ -16,7 +16,7 @@ import { Button } from "./ui/button";
 import { useConnectionStore } from "@/stores/connectionStore";
 import axios from "axios";
 
-const API = "https://connecto-2.onrender.com";
+const API = "https://connectoo-hhu6.onrender.com";
 const authHeader = () => ({
   Authorization: `Bearer ${localStorage.getItem("token")}`,
 });

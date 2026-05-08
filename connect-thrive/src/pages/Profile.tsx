@@ -30,8 +30,8 @@ import FindMatchButton from "../components/FindMatch/FindMatchButton";
 
 const API_BASE =
   window.location.hostname === "localhost"
-    ? "https://connecto-2.onrender.com/api"
-    : "https://connecto-2.onrender.com/api";
+    ? "https://connectoo-hhu6.onrender.com/api"
+    : "https://connectoo-hhu6.onrender.com/api";
 const API = `${API_BASE}/users`;
 
 const COMMUNITY_DISPLAY: Record<
@@ -163,7 +163,7 @@ function Profile() {
 
     // 2. Communities
     axios.get(
-      `https://connecto-2.onrender.com/api/communities/my-communities/details`,
+      `https://connectoo-hhu6.onrender.com/api/communities/my-communities/details`,
       { headers },
     );
     axios

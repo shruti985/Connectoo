@@ -10,8 +10,8 @@ import axios from "axios";
 
 const API_ROOT =
   window.location.hostname === "localhost"
-    ? "https://connecto-2.onrender.com/api"
-    : "https://connecto-2.onrender.com/api";
+    ? "http://localhost:5000/api"
+    : "http://localhost:5000/api";
 const API_BASE = `${API_ROOT}/auth`;
 
 const Signup = () => {

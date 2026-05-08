@@ -45,7 +45,7 @@ interface ConnectionState {
   ) => Promise<boolean>;
 }
 
-const API_BASE = "https://connecto-2.onrender.com/api";
+const API_BASE = "https://connectoo-hhu6.onrender.com/api";
 
 // Helper to get Auth Headers
 const getHeaders = () => ({
@@ -140,7 +140,7 @@ export const useConnectionStore = create<ConnectionState>((set, get) => ({
   disconnect: async (buddyId: number) => {
     try {
       const res = await fetch(
-        `https://connecto-2.onrender.com/api/connections/disconnect/${buddyId}`,
+        `https://connectoo-hhu6.onrender.com/api/connections/disconnect/${buddyId}`,
         {
           method: "DELETE",
           headers: getHeaders(),

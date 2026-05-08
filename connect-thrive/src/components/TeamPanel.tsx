@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 import axios from "axios";
 
-const API = "https://connecto-2.onrender.com"; // Change to your backend URL
+const API = "https://connectoo-hhu6.onrender.com"; // Change to your backend URL
 const authHeader = () => ({
   Authorization: `Bearer ${localStorage.getItem("token")}`,
 });

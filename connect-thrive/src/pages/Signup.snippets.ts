@@ -23,11 +23,14 @@ import axios from "axios";
 const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
   try {
-    const res = await axios.post("https://connecto-2.onrender.com/api/auth/signup", {
-      username: name,
-      email,
-      password,
-    });
+    const res = await axios.post(
+      "https://connectoo-hhu6.onrender.com/api/auth/signup",
+      {
+        username: name,
+        email,
+        password,
+      },
+    );
 
     // Save the token exactly as you do now
     localStorage.setItem("token", res.data.token);

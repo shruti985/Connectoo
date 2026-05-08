@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import axios from "axios";
 import { MapPin, Mail } from "lucide-react";
 
-const API = "https://connecto-2.onrender.com/api/users";
+const API = "https://connectoo-hhu6.onrender.com/api/users";
 
 function UserProfile() {
   const { id } = useParams();

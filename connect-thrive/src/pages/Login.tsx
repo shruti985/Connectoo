@@ -10,8 +10,8 @@ import axios from "axios";
 
 const API_ROOT =
   window.location.hostname === "localhost"
-    ? "https://connecto-2.onrender.com/api"
-    : "https://connecto-2.onrender.com/api";
+    ? "https://connectoo-hhu6.onrender.com/api"
+    : "https://connectoo-hhu6.onrender.com/api";
 
 const Login = () => {
   const [email, setEmail] = useState("");
