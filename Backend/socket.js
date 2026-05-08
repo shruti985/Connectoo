@@ -4,7 +4,7 @@ const pool = require("./config/db.js");
 const initSocket = (server) => {
   const io = new Server(server, {
     cors: {
-      origin: ["https://connecto-2.vercel.app", "http://localhost:8080"], // Aapka frontend URL
+      origin: ["https://connectoo-jade.vercel.app/", "http://localhost:8080"], // Aapka frontend URL
       methods: ["GET", "POST"],
       credentials: true,
     },
@@ -26,7 +26,11 @@ const initSocket = (server) => {
         const query =
           "INSERT INTO community_messages (community_id, sender_name, message_text, created_at) VALUES (?, ?, ?, NOW())";
 
-        const [result] = await pool.execute(query, [communityId, sender_name, message_text]);
+        const [result] = await pool.execute(query, [
+          communityId,
+          sender_name,
+          message_text,
+        ]);
 
         io.to(communityId).emit("receive_message", {
           id: result.insertId,
@@ -55,23 +59,25 @@ const initSocket = (server) => {
       try {
         const { senderId, receiverId, text } = data;
 
-        // Note: DB insertion hum Routes mein kar rahe hain, 
+        // Note: DB insertion hum Routes mein kar rahe hain,
         // par agar real-time update chahiye toh socket se emit karna zaruri hai.
-        
+
         const messagePayload = {
           sender_id: senderId,
           receiver_id: receiverId,
           message_text: text,
           created_at: new Date().toISOString(),
-          is_request: false // Initial logic ke liye
+          is_request: false, // Initial logic ke liye
         };
 
         // Bhejne wale ko dikhao (Self)
         socket.emit("receive_direct_message", messagePayload);
 
         // Pane wale ko dikhao (Receiver's private room)
-        io.to(`user_${receiverId}`).emit("receive_direct_message", messagePayload);
-
+        io.to(`user_${receiverId}`).emit(
+          "receive_direct_message",
+          messagePayload,
+        );
       } catch (err) {
         console.error("❌ Direct Message Socket Error:", err);
       }
