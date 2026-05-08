@@ -106,13 +106,6 @@ exports.signup = async (req, res) => {
       .json({ message: "All field are required!" });
   }
 
-  // 2. NIT KKR Email Check
-  if (!email.endsWith("@nitkkr.ac.in")) {
-    return res
-      .status(400)
-      .json({ message: "Sirf @nitkkr.ac.in email hi allowed hai!" });
-  }
-
   try {
     // 3. Check if user already exists
     const [existingUser] = await db.query(
@@ -122,7 +115,7 @@ exports.signup = async (req, res) => {
     if (existingUser.length > 0) {
       return res
         .status(400)
-        .json({ message: "Email pehle se registered hai!" });
+        .json({ message: "Email already registered!" });
     }
 
     const otp = String(Math.floor(100000 + Math.random() * 900000));
