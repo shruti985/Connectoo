@@ -23,7 +23,7 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "https://connecto-2.vercel.app",
+      "connectoo-jade.vercel.app",
       "http://localhost:5173",
       "http://localhost:8080",
     ],
