@@ -111,10 +111,10 @@ const Signup = () => {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="email">College Email</Label>
+              <Label htmlFor="email">Email</Label>
               <div className="relative">
                 <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-                <Input id="email" name="email" type="email" placeholder="you@nit.edu"
+                <Input id="email" name="email" type="email" placeholder="you@example.com"
                   value={formData.email} onChange={handleChange} className="pl-10" required />
               </div>
             </div>

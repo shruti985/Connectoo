@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import Profile from "./pages/Profile";
 import Communities from "./pages/Communities";
@@ -25,6 +25,7 @@ import Funding from "./pages/startup/Funding";
 import IdeaHub from "./pages/startup/IdeaHub";
 import UserProfile from "./pages/UserProfile";
 import NotificationsPage from "./pages/NotificationsPage";
+import HackathonTab from "./components/hackathon/Hackathontab";
 
 
 const queryClient = new QueryClient();
@@ -122,6 +123,7 @@ const App = () => (
           <Route path="/startup/ideas" element={<IdeaHub />} />
           <Route path="/startup/mentor/:id" element={<MentorProfile />} />
           <Route path="/startup/funding" element={<Funding />} />
+          <Route path="/hackathon" element={<HackathonTab />} />
           <Route
             path="/onboarding"
             element={

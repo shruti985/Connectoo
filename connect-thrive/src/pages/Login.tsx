@@ -123,6 +123,7 @@ const Login = () => {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  placeholder="you@example.com"
                   className="pl-10"
                   required
                 />
